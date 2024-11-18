@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donation Interface</title>
+    <link rel="stylesheet" href="donation.css">
+</head>
+<body>
+    <header>
+        <h1>Donation Interface</h1>
+    </header>
+    <main>
+        <h2>Register or Login</h2>
+        <div class="form-container">
+            <form action="donation_register.php" method="POST">
+                <h3>Donor Registration</h3>
+                <input type="text" name="name" placeholder="Name" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <button type="submit">Register</button>
+            </form>
+            <form action="donation_login.php" method="POST">
+                <h3>Donor Login</h3>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+        <h3>Make a Donation</h3>
+        <form action="donate.php" method="POST">
+            <select name="donation_type" required>
+                <option value="">Select Donation Type</option>
+                <option value="clothes">Clothes</option>
+                <option value="money">Money</option>
+                <option value="food">Food</option>
+            </select>
+            <textarea name="description" placeholder="Description" required></textarea>
+            <button type="submit">Donate</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2023 Shaaka. All rights reserved.</p>
+    </footer>
+</body>
+</html>

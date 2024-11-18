@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmer Interface</title>
+    <link rel="stylesheet" href="farmer.css">
+</head>
+<body>
+    <header>
+        <h1>Farmer Interface</h1>
+    </header>
+    <main>
+        <h2>Register or Login</h2>
+        <div class="form-container">
+            <form action="farmer_register.php" method="POST">
+                <h3>Farmer Registration</h3>
+                <input type="text" name="name" placeholder="Name" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <button type="submit">Register</button>
+            </form>
+            <form action="farmer_login.php" method="POST">
+                <h3>Farmer Login</h3>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+        <h3>Add Your Products</h3>
+        <form action="add_product.php" method="POST" enctype="multipart/form-data">
+            <input type="text" name="product_name" placeholder="Product Name" required>
+            <input type="file" name="image" required>
+            <input type="number" name="quantity" placeholder="Quantity" required>
+            <input type="number" name="price" placeholder="Price" required>
+            <button type="submit">Add Product</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2023 Shaaka. All rights reserved.</p>
+    </footer>
+</body>
+</html>
